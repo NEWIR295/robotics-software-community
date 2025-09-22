@@ -4,7 +4,7 @@
       "type_name": "temp_interface/msg/Temperature",
       "fields": [
         {
-          "name": "temperature",
+          "name": "value",
           "type": {
             "type_id": 1,
             "capacity": 0,
@@ -19,7 +19,7 @@
             "type_id": 1,
             "capacity": 0,
             "string_capacity": 0,
-            "nested_type_name": "std_msgs/msg/Int64"
+            "nested_type_name": "builtin_interfaces/msg/Time"
           },
           "default_value": ""
         },
@@ -47,12 +47,22 @@
     },
     "referenced_type_descriptions": [
       {
-        "type_name": "std_msgs/msg/Float32",
+        "type_name": "builtin_interfaces/msg/Time",
         "fields": [
           {
-            "name": "data",
+            "name": "sec",
             "type": {
-              "type_id": 10,
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "nanosec",
+            "type": {
+              "type_id": 7,
               "capacity": 0,
               "string_capacity": 0,
               "nested_type_name": ""
@@ -62,12 +72,12 @@
         ]
       },
       {
-        "type_name": "std_msgs/msg/Int64",
+        "type_name": "std_msgs/msg/Float32",
         "fields": [
           {
             "name": "data",
             "type": {
-              "type_id": 8,
+              "type_id": 10,
               "capacity": 0,
               "string_capacity": 0,
               "nested_type_name": ""
@@ -96,15 +106,15 @@
   "type_hashes": [
     {
       "type_name": "temp_interface/msg/Temperature",
-      "hash_string": "RIHS01_37d366aaf89c322bcf470cd2ba824e260bb7f86c4a85d844c562c9b4435ccdad"
+      "hash_string": "RIHS01_5bfd7d380eb1ae2501400fd7ab0edf3be29498032a53728684bea1dc47917512"
+    },
+    {
+      "type_name": "builtin_interfaces/msg/Time",
+      "hash_string": "RIHS01_b106235e25a4c5ed35098aa0a61a3ee9c9b18d197f398b0e4206cea9acf9c197"
     },
     {
       "type_name": "std_msgs/msg/Float32",
       "hash_string": "RIHS01_7170d3d8f841f7be3172ce5f4f59f3a4d7f63b0447e8b33327601ad64d83d6e2"
-    },
-    {
-      "type_name": "std_msgs/msg/Int64",
-      "hash_string": "RIHS01_8cd1048c2f186b6bd9a92472dc1ce51723c0833a221e2b7aecfff111774f4b49"
     },
     {
       "type_name": "std_msgs/msg/String",

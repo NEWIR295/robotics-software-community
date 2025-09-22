@@ -13,14 +13,14 @@
 
 
 // Include directives for member types
-// Member `temperature`
+// Member `value`
 #include "std_msgs/msg/float32.h"
-// Member `temperature`
+// Member `value`
 #include "std_msgs/msg/detail/float32__rosidl_typesupport_introspection_c.h"
 // Member `timestamp`
-#include "std_msgs/msg/int64.h"
+#include "builtin_interfaces/msg/time.h"
 // Member `timestamp`
-#include "std_msgs/msg/detail/int64__rosidl_typesupport_introspection_c.h"
+#include "builtin_interfaces/msg/detail/time__rosidl_typesupport_introspection_c.h"
 // Member `sensor_id`
 // Member `unit`
 #include "std_msgs/msg/string.h"
@@ -49,7 +49,7 @@ void temp_interface__msg__Temperature__rosidl_typesupport_introspection_c__Tempe
 
 static rosidl_typesupport_introspection_c__MessageMember temp_interface__msg__Temperature__rosidl_typesupport_introspection_c__Temperature_message_member_array[4] = {
   {
-    "temperature",  // name
+    "value",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
@@ -57,7 +57,7 @@ static rosidl_typesupport_introspection_c__MessageMember temp_interface__msg__Te
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(temp_interface__msg__Temperature, temperature),  // bytes offset in struct
+    offsetof(temp_interface__msg__Temperature, value),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -150,7 +150,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
   temp_interface__msg__Temperature__rosidl_typesupport_introspection_c__Temperature_message_member_array[0].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, std_msgs, msg, Float32)();
   temp_interface__msg__Temperature__rosidl_typesupport_introspection_c__Temperature_message_member_array[1].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, std_msgs, msg, Int64)();
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, builtin_interfaces, msg, Time)();
   temp_interface__msg__Temperature__rosidl_typesupport_introspection_c__Temperature_message_member_array[2].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, std_msgs, msg, String)();
   temp_interface__msg__Temperature__rosidl_typesupport_introspection_c__Temperature_message_member_array[3].members_ =

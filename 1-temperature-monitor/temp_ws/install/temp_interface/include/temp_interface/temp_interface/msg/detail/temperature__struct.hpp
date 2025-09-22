@@ -19,10 +19,10 @@
 
 
 // Include directives for member types
-// Member 'temperature'
+// Member 'value'
 #include "std_msgs/msg/detail/float32__struct.hpp"
 // Member 'timestamp'
-#include "std_msgs/msg/detail/int64__struct.hpp"
+#include "builtin_interfaces/msg/detail/time__struct.hpp"
 // Member 'sensor_id'
 // Member 'unit'
 #include "std_msgs/msg/detail/string__struct.hpp"
@@ -46,7 +46,7 @@ struct Temperature_
   using Type = Temperature_<ContainerAllocator>;
 
   explicit Temperature_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : temperature(_init),
+  : value(_init),
     timestamp(_init),
     sensor_id(_init),
     unit(_init)
@@ -55,7 +55,7 @@ struct Temperature_
   }
 
   explicit Temperature_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : temperature(_alloc, _init),
+  : value(_alloc, _init),
     timestamp(_alloc, _init),
     sensor_id(_alloc, _init),
     unit(_alloc, _init)
@@ -64,11 +64,11 @@ struct Temperature_
   }
 
   // field types and members
-  using _temperature_type =
+  using _value_type =
     std_msgs::msg::Float32_<ContainerAllocator>;
-  _temperature_type temperature;
+  _value_type value;
   using _timestamp_type =
-    std_msgs::msg::Int64_<ContainerAllocator>;
+    builtin_interfaces::msg::Time_<ContainerAllocator>;
   _timestamp_type timestamp;
   using _sensor_id_type =
     std_msgs::msg::String_<ContainerAllocator>;
@@ -78,14 +78,14 @@ struct Temperature_
   _unit_type unit;
 
   // setters for named parameter idiom
-  Type & set__temperature(
+  Type & set__value(
     const std_msgs::msg::Float32_<ContainerAllocator> & _arg)
   {
-    this->temperature = _arg;
+    this->value = _arg;
     return *this;
   }
   Type & set__timestamp(
-    const std_msgs::msg::Int64_<ContainerAllocator> & _arg)
+    const builtin_interfaces::msg::Time_<ContainerAllocator> & _arg)
   {
     this->timestamp = _arg;
     return *this;
@@ -145,7 +145,7 @@ struct Temperature_
   // comparison operators
   bool operator==(const Temperature_ & other) const
   {
-    if (this->temperature != other.temperature) {
+    if (this->value != other.value) {
       return false;
     }
     if (this->timestamp != other.timestamp) {

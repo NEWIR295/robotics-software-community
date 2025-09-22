@@ -40,7 +40,7 @@ void Temperature_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember Temperature_message_member_array[4] = {
   {
-    "temperature",  // name
+    "value",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<std_msgs::msg::Float32>(),  // members of sub message
@@ -48,7 +48,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Temperature_m
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(temp_interface::msg::Temperature, temperature),  // bytes offset in struct
+    offsetof(temp_interface::msg::Temperature, value),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -61,7 +61,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Temperature_m
     "timestamp",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<std_msgs::msg::Int64>(),  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<builtin_interfaces::msg::Time>(),  // members of sub message
     false,  // is key
     false,  // is array
     0,  // array size

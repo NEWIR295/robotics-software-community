@@ -2,22 +2,22 @@
 // with input from temp_interface/msg/Temperature.msg
 // generated code does not contain a copyright notice
 
+#include "builtin_interfaces/msg/Time.idl"
 #include "std_msgs/msg/Float32.idl"
-#include "std_msgs/msg/Int64.idl"
 #include "std_msgs/msg/String.idl"
 
 module temp_interface {
   module msg {
     @verbatim (language="comment", text=
-      "temprature message definition")
+      "temperature message definition")
     struct Temperature {
       @verbatim (language="comment", text=
         "Temperature value (float)")
-      std_msgs::msg::Float32 temperature;
+      std_msgs::msg::Float32 value;
 
       @verbatim (language="comment", text=
         "Timestamp")
-      std_msgs::msg::Int64 timestamp;
+      builtin_interfaces::msg::Time timestamp;
 
       @verbatim (language="comment", text=
         "Sensor ID (string)")

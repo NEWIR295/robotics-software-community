@@ -72,15 +72,15 @@ private:
   ::temp_interface::msg::Temperature msg_;
 };
 
-class Init_Temperature_temperature
+class Init_Temperature_value
 {
 public:
-  Init_Temperature_temperature()
+  Init_Temperature_value()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_Temperature_timestamp temperature(::temp_interface::msg::Temperature::_temperature_type arg)
+  Init_Temperature_timestamp value(::temp_interface::msg::Temperature::_value_type arg)
   {
-    msg_.temperature = std::move(arg);
+    msg_.value = std::move(arg);
     return Init_Temperature_timestamp(msg_);
   }
 
@@ -99,7 +99,7 @@ template<>
 inline
 auto build<::temp_interface::msg::Temperature>()
 {
-  return temp_interface::msg::builder::Init_Temperature_temperature();
+  return temp_interface::msg::builder::Init_Temperature_value();
 }
 
 }  // namespace temp_interface

@@ -12,10 +12,10 @@
 
 
 // Include directives for member types
-// Member `temperature`
+// Member `value`
 #include "std_msgs/msg/detail/float32__functions.h"
 // Member `timestamp`
-#include "std_msgs/msg/detail/int64__functions.h"
+#include "builtin_interfaces/msg/detail/time__functions.h"
 // Member `sensor_id`
 // Member `unit`
 #include "std_msgs/msg/detail/string__functions.h"
@@ -26,13 +26,13 @@ temp_interface__msg__Temperature__init(temp_interface__msg__Temperature * msg)
   if (!msg) {
     return false;
   }
-  // temperature
-  if (!std_msgs__msg__Float32__init(&msg->temperature)) {
+  // value
+  if (!std_msgs__msg__Float32__init(&msg->value)) {
     temp_interface__msg__Temperature__fini(msg);
     return false;
   }
   // timestamp
-  if (!std_msgs__msg__Int64__init(&msg->timestamp)) {
+  if (!builtin_interfaces__msg__Time__init(&msg->timestamp)) {
     temp_interface__msg__Temperature__fini(msg);
     return false;
   }
@@ -55,10 +55,10 @@ temp_interface__msg__Temperature__fini(temp_interface__msg__Temperature * msg)
   if (!msg) {
     return;
   }
-  // temperature
-  std_msgs__msg__Float32__fini(&msg->temperature);
+  // value
+  std_msgs__msg__Float32__fini(&msg->value);
   // timestamp
-  std_msgs__msg__Int64__fini(&msg->timestamp);
+  builtin_interfaces__msg__Time__fini(&msg->timestamp);
   // sensor_id
   std_msgs__msg__String__fini(&msg->sensor_id);
   // unit
@@ -71,14 +71,14 @@ temp_interface__msg__Temperature__are_equal(const temp_interface__msg__Temperatu
   if (!lhs || !rhs) {
     return false;
   }
-  // temperature
+  // value
   if (!std_msgs__msg__Float32__are_equal(
-      &(lhs->temperature), &(rhs->temperature)))
+      &(lhs->value), &(rhs->value)))
   {
     return false;
   }
   // timestamp
-  if (!std_msgs__msg__Int64__are_equal(
+  if (!builtin_interfaces__msg__Time__are_equal(
       &(lhs->timestamp), &(rhs->timestamp)))
   {
     return false;
@@ -106,14 +106,14 @@ temp_interface__msg__Temperature__copy(
   if (!input || !output) {
     return false;
   }
-  // temperature
+  // value
   if (!std_msgs__msg__Float32__copy(
-      &(input->temperature), &(output->temperature)))
+      &(input->value), &(output->value)))
   {
     return false;
   }
   // timestamp
-  if (!std_msgs__msg__Int64__copy(
+  if (!builtin_interfaces__msg__Time__copy(
       &(input->timestamp), &(output->timestamp)))
   {
     return false;

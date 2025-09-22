@@ -18,10 +18,10 @@
 #include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
-// Member 'temperature'
+// Member 'value'
 #include "std_msgs/msg/detail/float32__traits.hpp"
 // Member 'timestamp'
-#include "std_msgs/msg/detail/int64__traits.hpp"
+#include "builtin_interfaces/msg/detail/time__traits.hpp"
 // Member 'sensor_id'
 // Member 'unit'
 #include "std_msgs/msg/detail/string__traits.hpp"
@@ -37,10 +37,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: temperature
+  // member: value
   {
-    out << "temperature: ";
-    to_flow_style_yaml(msg.temperature, out);
+    out << "value: ";
+    to_flow_style_yaml(msg.value, out);
     out << ", ";
   }
 
@@ -70,13 +70,13 @@ inline void to_block_style_yaml(
   const Temperature & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: temperature
+  // member: value
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "temperature:\n";
-    to_block_style_yaml(msg.temperature, out, indentation + 2);
+    out << "value:\n";
+    to_block_style_yaml(msg.value, out, indentation + 2);
   }
 
   // member: timestamp
@@ -153,11 +153,11 @@ inline const char * name<temp_interface::msg::Temperature>()
 
 template<>
 struct has_fixed_size<temp_interface::msg::Temperature>
-  : std::integral_constant<bool, has_fixed_size<std_msgs::msg::Float32>::value && has_fixed_size<std_msgs::msg::Int64>::value && has_fixed_size<std_msgs::msg::String>::value> {};
+  : std::integral_constant<bool, has_fixed_size<builtin_interfaces::msg::Time>::value && has_fixed_size<std_msgs::msg::Float32>::value && has_fixed_size<std_msgs::msg::String>::value> {};
 
 template<>
 struct has_bounded_size<temp_interface::msg::Temperature>
-  : std::integral_constant<bool, has_bounded_size<std_msgs::msg::Float32>::value && has_bounded_size<std_msgs::msg::Int64>::value && has_bounded_size<std_msgs::msg::String>::value> {};
+  : std::integral_constant<bool, has_bounded_size<builtin_interfaces::msg::Time>::value && has_bounded_size<std_msgs::msg::Float32>::value && has_bounded_size<std_msgs::msg::String>::value> {};
 
 template<>
 struct is_message<temp_interface::msg::Temperature>

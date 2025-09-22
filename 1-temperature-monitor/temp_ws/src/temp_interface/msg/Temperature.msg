@@ -1,10 +1,10 @@
-# temprature message definition
+# temperature message definition
 
 # Temperature value (float)
-std_msgs/Float32 temperature
+std_msgs/Float32 value
 
 # Timestamp
-std_msgs/Int64 timestamp
+builtin_interfaces/Time timestamp
 
 # Sensor ID (string)
 std_msgs/String sensor_id

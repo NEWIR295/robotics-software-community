@@ -20,24 +20,24 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'temperature'
+// Member 'value'
 #include "std_msgs/msg/detail/float32__struct.h"
 // Member 'timestamp'
-#include "std_msgs/msg/detail/int64__struct.h"
+#include "builtin_interfaces/msg/detail/time__struct.h"
 // Member 'sensor_id'
 // Member 'unit'
 #include "std_msgs/msg/detail/string__struct.h"
 
 /// Struct defined in msg/Temperature in the package temp_interface.
 /**
-  * temprature message definition
+  * temperature message definition
  */
 typedef struct temp_interface__msg__Temperature
 {
   /// Temperature value (float)
-  std_msgs__msg__Float32 temperature;
+  std_msgs__msg__Float32 value;
   /// Timestamp
-  std_msgs__msg__Int64 timestamp;
+  builtin_interfaces__msg__Time timestamp;
   /// Sensor ID (string)
   std_msgs__msg__String sensor_id;
   /// Unit (Celsius/Fahrenheit)
