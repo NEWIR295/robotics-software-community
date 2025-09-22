@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from temp_interface/msg/Temperature.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Float32.idl"
+#include "std_msgs/msg/Int64.idl"
+#include "std_msgs/msg/String.idl"
+
+module temp_interface {
+  module msg {
+    @verbatim (language="comment", text=
+      "temprature message definition")
+    struct Temperature {
+      @verbatim (language="comment", text=
+        "Temperature value (float)")
+      std_msgs::msg::Float32 temperature;
+
+      @verbatim (language="comment", text=
+        "Timestamp")
+      std_msgs::msg::Int64 timestamp;
+
+      @verbatim (language="comment", text=
+        "Sensor ID (string)")
+      std_msgs::msg::String sensor_id;
+
+      @verbatim (language="comment", text=
+        "Unit (Celsius/Fahrenheit)")
+      std_msgs::msg::String unit;
+    };
+  };
+};

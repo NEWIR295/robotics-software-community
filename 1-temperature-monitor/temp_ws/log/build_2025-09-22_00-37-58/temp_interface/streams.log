@@ -1,0 +1,68 @@
+[0.019s] Invoking command in '/home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/src/temp_interface -DCMAKE_INSTALL_PREFIX=/home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_interface
+[0.114s] -- The C compiler identification is GNU 13.3.0
+[0.215s] -- The CXX compiler identification is GNU 13.3.0
+[0.244s] -- Detecting C compiler ABI info
+[0.384s] -- Detecting C compiler ABI info - done
+[0.401s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.401s] -- Detecting C compile features
+[0.402s] -- Detecting C compile features - done
+[0.427s] -- Detecting CXX compiler ABI info
+[0.592s] -- Detecting CXX compiler ABI info - done
+[0.610s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.615s] -- Detecting CXX compile features
+[0.615s] -- Detecting CXX compile features - done
+[0.632s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.888s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.086s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.180s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.205s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.251s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.287s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.359s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.384s] -- Found rosidl_adapter: 4.6.6 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.856s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):
+[1.856s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[1.856s]   temp_interface --arguments-file
+[1.856s]   /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_interface/rosidl_adapter__arguments__temp_interface.json
+[1.856s]   --output-dir
+[1.856s]   /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_interface/rosidl_adapter/temp_interface
+[1.856s]   --output-file
+[1.856s]   /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_interface/rosidl_adapter/temp_interface.idls)
+[1.857s]   returned error code 1:
+[1.857s] 
+[1.857s]   Error processing 'std_msgs/Float32 Temperature' of
+[1.857s]   'temp_interface/Temperature': ''Temperature' is an invalid field name.  It
+[1.857s]   should have the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[1.857s] 
+[1.857s]   Traceback (most recent call last):
+[1.857s] 
+[1.857s]     File "<frozen runpy>", line 198, in _run_module_as_main
+[1.857s]     File "<frozen runpy>", line 88, in _run_code
+[1.858s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.858s]       sys.exit(main())
+[1.858s]                ^^^^^^
+[1.858s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/main.py", line 53, in main
+[1.858s]       abs_idl_file = convert_to_idl(
+[1.858s]                      ^^^^^^^^^^^^^^^
+[1.858s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[1.858s]       return convert_msg_to_idl(
+[1.858s]              ^^^^^^^^^^^^^^^^^^^
+[1.858s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[1.859s]       msg = parse_message_string(package_name, input_file.stem, content)
+[1.859s]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1.859s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 520, in parse_message_string
+[1.859s]       fields.append(Field(
+[1.859s]                     ^^^^^^
+[1.859s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/parser.py", line 355, in __init__
+[1.859s]       raise NameError(
+[1.859s] 
+[1.859s]   NameError: 'Temperature' is an invalid field name.  It should have the
+[1.859s]   pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[1.860s] 
+[1.860s] Call Stack (most recent call first):
+[1.860s]   /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)
+[1.860s]   CMakeLists.txt:17 (rosidl_generate_interfaces)
+[1.860s] 
+[1.860s] [0m
+[1.860s] -- Configuring incomplete, errors occurred!
+[1.868s] Invoked command in '/home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_interface' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/src/temp_interface -DCMAKE_INSTALL_PREFIX=/home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_interface

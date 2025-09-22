@@ -1,0 +1,38 @@
+[2.279s] Invoking command in '/home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/src/temp_client': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_client/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/temp_client build --build-base /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/build install --record /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/install.log --single-version-externally-managed install_data
+[2.880s] running egg_info
+[2.881s] creating ../../build/temp_client/temp_client.egg-info
+[2.920s] writing ../../build/temp_client/temp_client.egg-info/PKG-INFO
+[2.921s] writing dependency_links to ../../build/temp_client/temp_client.egg-info/dependency_links.txt
+[2.921s] writing entry points to ../../build/temp_client/temp_client.egg-info/entry_points.txt
+[2.921s] writing requirements to ../../build/temp_client/temp_client.egg-info/requires.txt
+[2.921s] writing top-level names to ../../build/temp_client/temp_client.egg-info/top_level.txt
+[3.115s] writing manifest file '../../build/temp_client/temp_client.egg-info/SOURCES.txt'
+[3.213s] reading manifest file '../../build/temp_client/temp_client.egg-info/SOURCES.txt'
+[3.214s] adding license file 'LICENSE'
+[3.215s] writing manifest file '../../build/temp_client/temp_client.egg-info/SOURCES.txt'
+[3.215s] running build
+[3.215s] running build_py
+[3.215s] creating /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/build
+[3.216s] creating /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/build/lib
+[3.216s] creating /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/build/lib/temp_client
+[3.216s] copying temp_client/temp_pub.py -> /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/build/lib/temp_client
+[3.216s] copying temp_client/__init__.py -> /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/build/lib/temp_client
+[3.217s] running install
+[3.227s] running install_lib
+[3.285s] creating /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_client/lib/python3.12/site-packages/temp_client
+[3.287s] copying /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/build/lib/temp_client/temp_pub.py -> /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_client/lib/python3.12/site-packages/temp_client
+[3.287s] copying /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/build/lib/temp_client/__init__.py -> /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_client/lib/python3.12/site-packages/temp_client
+[3.287s] byte-compiling /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_client/lib/python3.12/site-packages/temp_client/temp_pub.py to temp_pub.cpython-312.pyc
+[3.290s] byte-compiling /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_client/lib/python3.12/site-packages/temp_client/__init__.py to __init__.cpython-312.pyc
+[3.291s] running install_data
+[3.291s] creating /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_client/share/ament_index
+[3.291s] creating /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_client/share/ament_index/resource_index
+[3.292s] creating /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_client/share/ament_index/resource_index/packages
+[3.292s] copying resource/temp_client -> /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_client/share/ament_index/resource_index/packages
+[3.292s] copying package.xml -> /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_client/share/temp_client
+[3.292s] running install_egg_info
+[3.342s] Copying ../../build/temp_client/temp_client.egg-info to /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_client/lib/python3.12/site-packages/temp_client-0.0.0-py3.12.egg-info
+[3.346s] running install_scripts
+[3.476s] Installing temp_pub script to /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_client/lib/temp_client
+[3.477s] writing list of installed files to '/home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/install.log'
+[3.525s] Invoked command in '/home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/src/temp_client' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_client/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/temp_client build --build-base /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/build install --record /home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/install.log --single-version-externally-managed install_data
