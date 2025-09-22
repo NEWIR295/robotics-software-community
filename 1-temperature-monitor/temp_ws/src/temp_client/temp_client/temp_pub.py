@@ -43,12 +43,11 @@ class TempPublisher(Node):
         self.sensor_id = sys.argv[1] if len(sys.argv) > 1 else "1" # get sensor id from command line argument or default to "1"
         topic_name = f"/temp_sensor_{self.sensor_id}" # define topic name based on sensor id
         freq =  int(sys.argv[2]) if (len(sys.argv)) > 2 else 1 # get publishing frequency from command line argument or default to 1 Hz
-        self.range = tuple((int(sys.argv[3]), int(sys.argv [4]))) if len(sys.argv) > 3 else tuple((10.0, 30.0)) # get temperature range from command line arguments or default to (10, 30)
+        self.min_temp, self.max_temp = tuple((int(sys.argv[3]), int(sys.argv [4]))) if len(sys.argv) > 3 else tuple((10.0, 30.0)) # get temperature range from command line arguments or default to (10, 30)
         self.unit = sys.argv[5] if len(sys.argv) > 5 else "C" # get temperature unit from command line argument or default to "C"
         
         super().__init__(f"temp_publisher_{self.sensor_id}") #initialize the node with the name "temp_publisher"
-        self.get_logger().info(f"Temperature Publisher Node Started For {self.sensor_id} on {topic_name} at {freq} Hz        \
-                                with range ({self.range}, {self.unit})")
+        self.get_logger().info(f"Temperature Publisher Node Started For {self.sensor_id} on {topic_name} at {freq} Hz with range ({self.min_temp}, {self.max_temp}) {self.unit}")
         
         qos = QoSProfile(   # create a QoS profile for the publisher
             reliability = ReliabilityPolicy.BEST_EFFORT, # fire and forget delivery
@@ -72,13 +71,15 @@ class TempPublisher(Node):
                                         # i can use self.get_clock().now().to_msg()
                                         
         self.temp_pub.publish(msg) # publish the temperature message
-        self.get_logger().info(f"Published Temperature: {msg.value} {msg.unit} from {msg.sensor_id} at {msg.timestamp}")
+        self.get_logger().info(f"Published Temperature: {msg.value.data} {msg.unit.data} from sensor_{msg.sensor_id.data} at {msg.timestamp.sec}.{msg.timestamp.nanosec}")
+
+        if (msg.value.data < self.min_temp) or (msg.value.data > self.max_temp):
+            self.get_logger().warn(f"Temperature {msg.value.data} {msg.unit.data} from sensor_{msg.sensor_id.data} is out of range! at {msg.timestamp.sec}.{msg.timestamp.nanosec}")
         
     
     def randomize_temp(self):
-        min_temp, max_temp = self.range 
-        mean = (min_temp + max_temp) / 2 
-        amplitude = (max_temp - min_temp) / 2
+        mean = (self.min_temp + self.max_temp) / 2 
+        amplitude = (self.max_temp - self.min_temp) / 2
         temp = mean + amplitude * math.sin(rclpy.clock.Clock().now().nanoseconds / 1e9) # generate a sinusoidal temperature reading
         temp += random.uniform(-1.0, 1.0) # generate a small random noise to add to the temperature reading
         return round(temp, 2) # return the temperature reading rounded to 2 decimal places
