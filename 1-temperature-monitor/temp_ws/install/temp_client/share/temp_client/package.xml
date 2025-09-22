@@ -1,1 +1,22 @@
-/home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/build/temp_client/package.xml
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>temp_client</name>
+  <version>0.0.0</version>
+  <description>Python package that publishes temperature readings every second, send request to server, etc ..</description>
+  <maintainer email="newir295@gmail.com">newir529</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>temp_interface</depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

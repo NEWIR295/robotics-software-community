@@ -1,0 +1,7 @@
+# YAML file for temperature range parameters
+
+/**:
+  ros__parameters:
+    min_temp: 5.0 # Minimum temperature threshold
+    max_temp: 40.0 # Maximum temperature threshold
+    unit: "C"     # Temperature unit "C" (Celsius) or "F" (Fahrenheit)
