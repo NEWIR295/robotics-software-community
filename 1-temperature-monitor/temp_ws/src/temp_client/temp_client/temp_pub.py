@@ -3,7 +3,8 @@
     Date: 22/09/2025
     File: temp_pub.py
     Description:
-        o Python Temperature Publisher node for ROS2, run it using: ros2 run temp_client temp_pub <sensor_id> <frequency> <min_temp> <max_temp> <unit>
+        o Python Temperature Publisher node for ROS2, run it using: 
+                    - ros2 run temp_client temp_pub <sensor_id> <frequency> <min_temp> <max_temp> <unit>
         o This node allows us to create multiple ROS2 nodes with different names and topics using the same executable without
             remapping node name or topic name as it gets the node name and topic name from command line arguments along with frequency and 
             temperature range.
