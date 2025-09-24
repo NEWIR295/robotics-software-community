@@ -65,7 +65,7 @@ class TempPublisher(Node):
         self.__max_temp = self.get_parameter("max_temp").value
         self.__unit = self.get_parameter("unit").value
         
-        self.get_logger().info(f"Temperature Publisher Node Started For {self.__sensor_id} at {self.__freq} Hz with range ({self.__min_temp}, {self.__max_temp}) {self.__unit}")
+        self.get_logger().info(f"Temperature Publisher Node Started For sensor_{self.__sensor_id} at {self.__freq} Hz with range ({self.__min_temp}, {self.__max_temp}) {self.__unit}")
         
         qos = QoSProfile(   # create a QoS profile for the publisher
             reliability = ReliabilityPolicy.BEST_EFFORT, # fire and forget delivery
@@ -101,6 +101,9 @@ class TempPublisher(Node):
         temp = mean + amplitude * math.sin(rclpy.clock.Clock().now().nanoseconds / 1e9) # generate a sinusoidal temperature reading
         temp += random.uniform(-1.0, 1.0) # generate a small random noise to add to the temperature reading
         return round(temp, 2) # return the temperature reading rounded to 2 decimal places
+    
+    def __del__(self):
+        self.get_logger().warn("Temperature Publisher Node Stopped Cleanly")
 
 
 """
@@ -109,9 +112,24 @@ class TempPublisher(Node):
 def main(args=None):
     rclpy.init(args=args) #initialize python client library 
     pub_node = TempPublisher() #create an instance of the TempPublisher class
-    rclpy.spin(pub_node) #keep the node running and processing callbacks
-    pub_node.destroy_node() #destroy the node when done 
-    rclpy.shutdown() #shutdown the ROS2 client library
+    
+
+    try:
+        rclpy.spin(pub_node) #keep the node running and processing callbacks
+    
+    except KeyboardInterrupt:
+        #pub_node.get_logger().info("Temperature Publisher Node Stopped Cleanly") # commented to avoid duplicate shutdown messages
+        pass
+    
+    except Exception as e:
+        pub_node.get_logger().error(f"Exception in Temperature Publisher Node: {e}")
+    
+    finally:    
+        # gracefully shutdown the node
+        pub_node.destroy_node() #destroy the node when done 
+        #rclpy.shutdown() #shutdown the ROS2 client library -> commented because rclpy.spin
+                                                            # already calls rclpy.shutdown() when exiting the spin loop 
+        #print("Temperature Publisher Node Stopped Cleanly") # print shutdown message to console -> handling it in class destructor
     
 
 if __name__ == '__main__':
