@@ -1,0 +1,33 @@
+version: "3.9" 
+
+services:
+  temperature_client:
+    build:
+          context: .
+          dockerfile: ./temp_client/Dockerfile
+    container_name: client
+    networks: 
+      - ros2_net # Define the network for ROS 2 communication
+    environment:
+      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID} # Use the same ROS_DOMAIN_ID for all containers
+      - DISPLAY=${DISPLAY} 
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix # Allow GUI applications to connect to the host's X server
+
+  temperature_server:
+    build:
+          context: .
+          dockerfile: ./temp_server/Dockerfile
+    container_name: server
+    networks: 
+      - ros2_net # Define the network for ROS 2 communication
+    environment:
+      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID} # Use the same ROS_DOMAIN_ID for all containers
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix # Allow GUI applications to connect to the host's X server
+
+networks:
+  ros2_net: # Define a custom network for ROS 2 communication
+    driver: bridge # Use bridge driver for container networking
+

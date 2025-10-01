@@ -2,7 +2,7 @@
 
 # since this file is sourced use either the provided AMENT_CURRENT_PREFIX
 # or fall back to the destination set at configure time
-: ${AMENT_CURRENT_PREFIX:="/home/newir529/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_interface"}
+: ${AMENT_CURRENT_PREFIX:="/home/newir529/ROS2_JAZZY_TUTORIAL/robotics-software-community/1-temperature-monitor/temp_ws/install/temp_interface"}
 if [ ! -d "$AMENT_CURRENT_PREFIX" ]; then
   if [ -z "$COLCON_CURRENT_PREFIX" ]; then
     echo "The compile time prefix path '$AMENT_CURRENT_PREFIX' doesn't " \
